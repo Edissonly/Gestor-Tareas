@@ -1,0 +1,22 @@
+import 'package:fl_chart/fl_chart.dart';
+
+class ChartScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Gráfico de Tareas')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: PieChart(
+          PieChartData(
+            sections: [
+              PieChartSectionData(value: 5, color: Colors.green, title: 'Completadas'),
+              PieChartSectionData(value: 3, color: Colors.red, title: 'No completadas'),
+              PieChartSectionData(value: 2, color: Colors.grey, title: 'Eliminadas'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
